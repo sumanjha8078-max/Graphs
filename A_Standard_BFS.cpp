@@ -10,7 +10,7 @@ void fast_io(){
 }
 
 void bfs(vector<vector<ll>>& adj, vector<ll>& ans, vector<ll>& vis, ll node){
-    multiset<ll> q;
+    multiset<ll> q; // Here the question demanded increasing path, that is why we used multiset instead of queue.
     q.insert(node);
     while(!q.empty()){
         ll use = *q.begin();
@@ -52,4 +52,5 @@ int main(){
         solve();
     }
     return 0;
+
 }
